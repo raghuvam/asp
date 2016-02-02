@@ -1,0 +1,16 @@
+
+all: mapper reducer combiner
+	echo "Builiding all"
+
+mapper:
+	gcc mapper.c -o mapper
+
+reducer:
+	gcc reducer.c -o reducer
+
+combiner:
+	gcc combiner.c -o combiner
+	
+clean:
+	rm -f mapper reducer combiner
+

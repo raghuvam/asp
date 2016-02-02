@@ -1,0 +1,16 @@
+
+all:mapper reducer combiner
+
+mapper:
+	gcc mapper.c -o mapper
+
+reducer:
+	gcc reducer.c -o reducer
+
+combiner:
+	gcc combiner.c -o combiner
+	
+clean:
+	echo "Removing all the executables"
+	rm -f mapper reducer combiner
+

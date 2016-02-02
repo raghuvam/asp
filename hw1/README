@@ -1,0 +1,19 @@
+Author: Sai Raghu Vamsi Anumula
+email:  sairaghuvamsi@gmail.com
+title:  HW 1
+##############################################
+###### COMPILING & RUNNING THE PROGRAM #######
+##############################################
+
+1. Compile the program usign make, this build mapper, reducer and combiner executables.
+
+	$ make all
+	
+2. To run the program, the input text file must be given
+	as argument to the combiner program.
+
+	$ ./combiner <input_file_name>
+
+3. To remove all the executables, if necessary.
+	
+	$ make clean 
