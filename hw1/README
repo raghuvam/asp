@@ -1,0 +1,34 @@
+Author: Sai Raghu Vamsi Anumula
+email:  sairaghuvamsi@gmail.com
+title:  HW 1
+##############################################
+###### COMPILING & RUNNING THE PROGRAM #######
+##############################################
+
+Mapper reads the strings from each line of the input text file and prints
+the (word,1) pair to the stdout. Reducer reads the strings from stdin and
+formats the string to extract the word, stores the counts fo no.of times 
+the word is encountered as (key,value) pair in the linked list. If the Reducer
+reads a word with a new starting charcter than previous one, is prints the
+(key, value) pairs of the previous words.
+
+Combines starts as a Parent process and creates a pipe. IT then creates the 
+Reducer as first child, which keeps listening on the read end of the pipe.
+Then a new child 2 is created, which executes the Mapper program, which pumps
+data to the write end of the pipe. Reduces then receives the words the prints
+the count as expected.
+
+
+1. Compile the program usign make, this build mapper, reducer and 
+   combiner executables.
+
+	$ make all
+	
+2. To run the program, the input text file must be given
+	as argument to the combiner program.
+
+	$ ./combiner <input_file_name>
+
+3. To remove all the executables, if necessary.
+	
+	$ make clean 
