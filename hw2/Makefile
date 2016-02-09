@@ -2,4 +2,4 @@
 
 
 all:
-	gcc -pthread mapper_reducer.c -o mapper_reducer
+	gcc -pthread wordStatistics.c -o wordStatistics
