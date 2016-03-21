@@ -1,5 +1,5 @@
 
-obj-m := char_driver.o
+obj-m := mycdrv.o
 
 KERNEL_DIR = /usr/src/linux-headers-$(shell uname -r)
 
