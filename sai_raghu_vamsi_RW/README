@@ -1,0 +1,33 @@
+###########################
+COMPILING & RUNNING PROGRAM
+###########################
+
+1. Extract the source files and Change directory to the extracted folder. Then execute make as follow.
+   
+   $ make all
+   
+   It will generate two executables "writer" and "reducer". 
+   And a shared libarary is generated in "<path_to_current_directory>/libs/"
+
+2. Setup environment variable, this will allow the shared library to load at run time.
+    
+    $ export LD_LIBRARY_PATH=`pwd`/libs:${LD_LIBRARY_PATH}
+
+    (or)
+
+    $ . ./set_env.sh
+
+    If you are using the script make sure that you use "."(dot) before ./set_env.sh. This "." 
+    allows the script to update the env variable in the current terminal only.
+        
+3. Run the writer program.
+    
+    $ ./writer
+
+    You can write a message using write option.
+
+4. Run reader program in seperate terminal. Again set the LD_LIBRARY_PATH to "<path_to_current_directory>/libs/".
+
+    $ ./reader
+
+    You can read a message using read option.
