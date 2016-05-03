@@ -1,0 +1,1 @@
+cmd_/home/rv/asp/hw4/char_driver.ko := ld -r -m elf_x86_64 -T ./scripts/module-common.lds --build-id  -o /home/rv/asp/hw4/char_driver.ko /home/rv/asp/hw4/char_driver.o /home/rv/asp/hw4/char_driver.mod.o

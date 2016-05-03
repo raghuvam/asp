@@ -1,0 +1,14 @@
+########################
+# COMPILING & RUNNING  #
+########################
+
+1. Compiling the driver module.
+
+	$ make all
+
+2. Running the module.
+
+	$ sudo rmmod usbhid
+	$ sudo insmod usbkbd.ko
+
+   Start testing with the external keyboard.

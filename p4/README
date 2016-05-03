@@ -1,0 +1,40 @@
+
+
+COMPILING THE CODE:
+
+1. Compiling the driver.
+	
+	$ make all
+
+   It creates mycdrv.ko in the current directory.
+
+2. Compiling application 
+	
+	$ make app
+
+3. Clean make.
+
+	$ make clean
+
+
+
+RUNNING THE CODE:
+
+1. Load the kernel module.
+
+	$ sudo insmod ./mycdrv.ko  NUM_DEVICES=<no.of devices> 
+
+   The above command creates /dev/mycdrv0 ,/dev/mycdrv1 ..../dev/mycdrv{N-1}.
+   This files can be used to run user applications.
+
+
+2. Running user app.
+
+	$ sudo ./userapp /dev/mycdrv{x}
+
+	And follow the commands
+
+3. Unload the kernel Module.
+
+	$ sudo rmmod mycdrv
+
